@@ -1,17 +1,15 @@
 .header {
     display: flex;
     justify-content: center;
-    padding: 15px 30px;
-    box-shadow: inset rgba(255, 255, 255, 0.2) 6px 6px 9px 2px,
-        inset rgba(0, 0, 0, 0.2) -2px -2px 9px 2px;
-    background: rgb(253, 247, 195);
-    background: linear-gradient(90deg, rgba(253, 247, 195, 1) 0%, rgba(255, 222, 180, 1) 25%, rgba(255, 180, 180, 1) 50%, rgba(178, 164, 255, 1) 99%);
+    padding: 20px 30px;
+    background: rgb(11, 129, 150);
+    
 }
 
 .search-input {
     width: 400px;
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
 }
 
@@ -24,22 +22,35 @@
     position: relative;
 }
 
-.search-button {
+.search-btn {
     position: absolute;
     right: 0;
     bottom: 0;
     top: 0;
     border: none;
-    border-top-right-radius: 5px;
+    border-top-right-radius: 10px;
     border-bottom-right-radius: 0;
     border-top-left-radius: 0;
-    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 10px;
     width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.load-more .is-hidden{
+.is-hidden{
     display: none;
+}
+
+.load-more{
+
+   width: 120px;
+   padding: 10px 15px;
+   border-radius: 10px;
+}
+.container{
+    display: block;
+    text-align: center;
+    
+  
 }

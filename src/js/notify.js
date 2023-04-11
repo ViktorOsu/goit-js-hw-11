@@ -1,11 +1,13 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-export function specificInfo() {
-  Notify.info('Too many matches found. Please enter a more specific name.');
+export function successInfo(data) {
+  Notify.success(`Hooray! We found ${data.totalHits} images.`);
 }
 
-export function onFetchError() {
-  Notify.failure(
-    `Sorry, there are no images matching your search query. Please try again`
-  );
+export function specificInfo() {
+  Notify.info(`We're sorry, but you've reached the end of search results.`);
+}
+
+export function warningInfo() {
+  Notify.warning(`Please, fill the main field'`);
 }
