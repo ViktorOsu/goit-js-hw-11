@@ -31,6 +31,15 @@ const observer = new IntersectionObserver(
 
         gallery.refresh();
 
+        const { height: cardHeight } = document
+          .querySelector('.gallery')
+          .firstElementChild.getBoundingClientRect();
+
+        window.scrollBy({
+          top: cardHeight * 2,
+          behavior: 'smooth',
+        });
+
         if (imagesApi.page === data.totalHits) {
           observer.unobserve(intersectionTargetEl);
         }
@@ -87,14 +96,6 @@ const onSearchFormSubmit = async event => {
     galleryList.innerHTML = createMarkup(data.hits);
 
     gallery.refresh();
-
-    const { height: cardHeight } = document
-      .querySelector('.gallery')
-      .firstElementChild.getBoundingClientRect();
-
-    window.scrollBy({
-      behavior: 'smooth',
-    });
 
     // loadMoreBtnEl.classList.remove('is-hidden');
 
