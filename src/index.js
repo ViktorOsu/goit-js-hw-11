@@ -3,13 +3,18 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { successInfo, specificInfo, warningInfo } from './js/notify';
-
+import {
+  searchFormEl,
+  galleryList,
+  loadMoreBtnEl,
+  intersectionTargetEl,
+} from './js/refs';
 import { ImagesApi } from './js/images-api';
 
-const searchFormEl = document.querySelector('.search-form');
-const galleryList = document.querySelector('.gallery-list');
-const loadMoreBtnEl = document.querySelector('.load-more');
-const intersectionTargetEl = document.querySelector('.observer');
+// const searchFormEl = document.querySelector('.search-form');
+// const galleryList = document.querySelector('.gallery-list');
+// const loadMoreBtnEl = document.querySelector('.load-more');
+// const intersectionTargetEl = document.querySelector('.observer');
 
 const imagesApi = new ImagesApi();
 let isShow = 0;
